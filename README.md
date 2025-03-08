@@ -1,2 +1,2 @@
-# CV_DevWeb
-Projet final du cours Développement front-end 
+# CV Développement web
+Projet final du cours de Développement front-end 
