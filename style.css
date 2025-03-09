@@ -13,6 +13,10 @@ header {
     width: 100%;
 }
 
+#header {
+    text-align: left;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -27,6 +31,8 @@ main {
 #left_column, #right_column {
     flex: 1;
     padding: 20px;
+    align-content: center;
+    
 }
 
 #left_column {
