@@ -122,3 +122,23 @@ main {
         padding-top: 270px;
     }
 }
+
+@media screen and (max-width : 500px) {
+
+    #header {
+        font-size: 60%;
+        
+    }
+    header img{
+        height: 125px;
+        margin: 0.5rem;
+    }
+
+    #left_column, #right_column {
+        padding-top: 200px;
+        padding-right: 0%;
+        padding-left: 2%;
+        
+    }
+
+}
