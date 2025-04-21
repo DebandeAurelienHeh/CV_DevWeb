@@ -10,6 +10,7 @@ Pour cette fonctionnalité, je fais appel à un plugin en ligne qui est mark.js.
 
 La deuxième fonctionnalité est tout simplement l'apparition de mon statut (étudiant développeur) avec un délai pour que ça attire l'oeil des personnes venant sur mon CV. 
 L'apparition du texte est assez rapide pour ne pas déranger et elle montre directement mon statut à la personne le lisant.
+J'ai aussi fait en sorte que lorsque l'on print le cv, le texte apparait directement pour être sur de l'avoir à l'impression.
 
 J'avais mis une autre fonctionnalité qui faisait en sorte que ma photo de profil "suive" la souris sur l'écran. Cela rajoutait de l'animation non invasive et un côté interactif avec l'utilisateur.
 Pour se faire, j'avais juste utilisé le plugin "creepyface" et un appel de toutes les photos différentes dans une balise image. 

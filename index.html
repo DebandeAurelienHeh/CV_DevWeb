@@ -108,6 +108,7 @@
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+    
     <script>
         // Search bar
         const searchInput = document.getElementById('search');
@@ -141,21 +142,42 @@
 
 
         // Apparition du statut au chargement de la page
-        const text = "Etudiant en informatique option développement";
+        const text = "Étudiant en informatique option développement";
         const typeWriter = document.getElementById("typeWriter");
         let index = 0;
+        let timeoutId = null;
+        let typing = true;
 
-        function typeWriterEffect(){
-            if (index < text.length){
-                typeWriter.innerHTML += text.charAt(index);
+        function typeWriterEffect() {
+            if (index < text.length) {
+                typeWriter.textContent = text.substring(0, index + 1);
                 index += 1;
-                time = 100;
-                setTimeout(typeWriterEffect, time);
+                timeoutId = setTimeout(typeWriterEffect, 100);
+            } 
+            else {
+                typing = false;
             }
         }
 
-        window.addEventListener("load", function() {
+        function showFullText() {
+            clearTimeout(timeoutId);
+            typeWriter.textContent = text;
+            typing = false;
+        }
+
+        function resetTyping() {
+            index = 0;
+            typeWriter.textContent = "";
+            typing = true;
             typeWriterEffect();
+        }
+
+        window.addEventListener("load", () => {
+            resetTyping();
+        });
+
+        window.addEventListener("beforeprint", () => {
+            showFullText();
         });
 
     </script>
