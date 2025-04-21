@@ -112,23 +112,23 @@
     <script>
     const searchInput = document.getElementById('search');
     const searchContexts = [
-    document.querySelector('#header'),
-    document.querySelector('#left_column'),
-    document.querySelector('#right_column')
+        document.querySelector('#header'),
+        document.querySelector('#left_column'),
+        document.querySelector('#right_column')
     ];
 
     const markers = searchContexts.map(context => new Mark(context));
 
     const handleSearch = (keyword) => {
-    markers.forEach(marker => {
-        marker.unmark({
-        done: () => keyword && marker.mark(keyword)
+        markers.forEach(marker => {
+            marker.unmark({
+            done: () => keyword && marker.mark(keyword)
+            });
         });
-    });
     };
 
     searchInput.addEventListener('input', (event) => {
-    handleSearch(event.target.value.trim());
+        handleSearch(event.target.value.trim());
     });
     </script>
     

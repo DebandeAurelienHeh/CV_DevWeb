@@ -59,6 +59,11 @@ header > div {
     outline: none;          
 }
 
+mark{
+    background: rgb(255, 255, 0);
+    color: black;
+}
+
 main {
     display: flex;
     flex-direction: column;
