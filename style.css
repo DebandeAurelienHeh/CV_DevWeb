@@ -44,6 +44,21 @@ header > div {
     text-align: left;
 }
 
+#search {
+    width: 100%;
+    max-width: 400px;       
+    padding: 10px 16px; 
+    margin-bottom: 16px;
+    border-radius: 20px;    
+    font-size: 1rem;       
+    transition: border 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+#search:focus {
+    outline: none;          
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -95,6 +110,12 @@ main {
     header img{
         height: 300px;
     }
+
+    #search {
+        height: 10px;
+        width: 100%;
+        max-width: 350px;       
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -121,8 +142,12 @@ main {
         height: 250px;
     }
     #left_column, #right_column {
-        padding-top: 330px;
+        padding-top: 370px;
         
+    }
+    #search {
+        padding: 0.5rem;
+        max-width: 300px;       
     }
 }
 
@@ -141,6 +166,9 @@ main {
     body {
         font-size: 120%;
     }
+    #search {
+        padding: 0.5rem;       
+    }
 
 }
 
@@ -148,6 +176,14 @@ main {
     #header {
         padding-left: 5%;
         padding-right: 5%;
+    }
+    #left_column, #right_column {
+        padding-top: 320px;
+    }
+
+    #search {
+        padding: 0.5rem;
+        max-width: 280px;       
     }
 }
 
@@ -160,12 +196,17 @@ main {
         margin: 0.5rem;
     }
     #left_column, #right_column {
-        padding-top: 230px;
+        padding-top: 240px;
         padding-right: 0%;
         padding-left: 2%;
     }
     body{
         font-size: 100%;
+    }
+    #search {
+        font-size: 90%;
+        padding: 0.3rem;
+        max-width: 160px;       
     }
 }
 
@@ -184,11 +225,26 @@ main {
         padding-top: 200px;
         font-size: 80%;
     }
+
+    #search {
+        padding: 0.2rem;
+        max-width: 120px;       
+    }
 }
 
 @media screen and (max-width: 440px) {
     #left_column, #right_column {
         font-size: 80%;
+    }
+
+    #search {
+        padding: 0.15rem;
+        max-width: 150px;
+        font-size: 80%;       
+    }
+
+    #left_column, #right_column {
+        padding-top: 210px;
     }
 }
 
@@ -201,13 +257,22 @@ main {
         padding-top: 0.4rem;
     }
     #left_column, #right_column {
-        padding-top: 160px;
+        padding-top: 170px;
         font-size: 70%;
+    }
+    #search {
+        padding: 0.1rem;
+        max-width: 150px;   
+        margin-bottom: 8px;  
     }
 }
 
 @media screen and (max-width: 350px) {
     #left_column, #right_column {
-        padding-top: 165px;
+        padding-top: 185px;
+    }
+    #search {
+        max-width: 130px;   
+
     }
 }

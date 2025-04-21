@@ -13,6 +13,22 @@
 <body>
     <header>
         <img src="images/PhotodeProfil.jpg" height="300" alt="Photo personnelle">
+        <!--
+        <script src="https://creepyface.io/creepyface.js"></script>
+        <img
+            data-creepyface
+            src="images/serious.png"
+            data-src-hover="images/hover.png"
+            data-src-look-0="images/0.png"
+            data-src-look-45="images/45.png"
+            data-src-look-90="images/90.png"
+            data-src-look-135="images/135.png"
+            data-src-look-180="images/180.png"
+            data-src-look-225="images/225.png"
+            data-src-look-270="images/270.png"
+            data-src-look-315="images/315.png"
+        />
+        -->
         <div>
             <div id="header">
                 <h1>Aurélien Debande</h1>
@@ -22,6 +38,7 @@
                 <p><i class="fab fa-github"></i> Github : DebandeAurelienHeh</p>
                 <p><i class="fab fa-linkedin"></i> Linkedin : www.linkedin.com/in/aurelien-debande-a09140350</p>
                 <p><i class="fas fa-home"></i> Adresse : Rue de Sartiau 89, 6533 Biercee </p>
+                <input type="text" id="search" placeholder="Rechercher...">
             </div>
         </div>
     </header>
@@ -90,5 +107,30 @@
             </div>
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+
+    <script>
+    const searchInput = document.getElementById('search');
+    const searchContexts = [
+    document.querySelector('#header'),
+    document.querySelector('#left_column'),
+    document.querySelector('#right_column')
+    ];
+
+    const markers = searchContexts.map(context => new Mark(context));
+
+    const handleSearch = (keyword) => {
+    markers.forEach(marker => {
+        marker.unmark({
+        done: () => keyword && marker.mark(keyword)
+        });
+    });
+    };
+
+    searchInput.addEventListener('input', (event) => {
+    handleSearch(event.target.value.trim());
+    });
+    </script>
+    
 </body>
 </html>
