@@ -249,7 +249,7 @@ main {
     }
 
     #left_column, #right_column {
-        padding-top: 210px;
+        padding-top: 220px;
     }
 }
 
@@ -262,7 +262,7 @@ main {
         padding-top: 0.4rem;
     }
     #left_column, #right_column {
-        padding-top: 170px;
+        padding-top: 180px;
         font-size: 70%;
     }
     #search {
