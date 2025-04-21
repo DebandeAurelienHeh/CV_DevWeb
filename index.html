@@ -32,7 +32,7 @@
         <div>
             <div id="header">
                 <h1>Aurélien Debande</h1>
-                <h4 id="typeWriter"></h4>
+                <h4 id="typeWriter">Étudiant en informatique option développement</h4>
                 <p><i class="fas fa-phone"></i> Téléphone : 0494.40.77.83</p>
                 <p><i class="fas fa-envelope"></i> Email : aureliendebande@gmail.com</p>
                 <p><i class="fab fa-github"></i> Github : DebandeAurelienHeh</p>
@@ -108,7 +108,7 @@
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
-    
+
     <script>
         // Search bar
         const searchInput = document.getElementById('search');
@@ -142,8 +142,8 @@
 
 
         // Apparition du statut au chargement de la page
-        const text = "Étudiant en informatique option développement";
         const typeWriter = document.getElementById("typeWriter");
+        const text = typeWriter.textContent;
         let index = 0;
         let timeoutId = null;
         let typing = true;
